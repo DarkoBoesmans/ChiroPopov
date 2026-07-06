@@ -1,0 +1,103 @@
+/* Font Face Declarations */
+@font-face {
+  font-family: "Hipstelvetica";
+  src:
+    url(../assets/fonts/hipstelvetica/hipstelvetica.woff2)")
+      format("woff2"),
+    url("../assets/fonts/hipstelvetica/hipstelvetica.woff")
+      format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Colors - High Contrast Festival Palette */
+:root {
+  --color-primary: #06d6a0; /* Neon Green */
+  --color-secondary: #ef476f; /* Neon Pink */
+  --color-accent: #1b9aaa; /* Cyan */
+  --color-black: #0d0f10; /* Deeper Black */
+  --color-white: #f8ffe5; /* Off White */
+
+  --hipstelvetica: "Hipstelvetica", sans-serif;
+  --poppins: "Poppins", sans-serif;
+  --roboto: "Roboto Slab", serif;
+
+  --header-height: 120px;
+}
+
+body {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  font-family: var(--poppins);
+  font-weight: 400;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Base Brutalist Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--hipstelvetica);
+  text-transform: uppercase;
+  font-weight: 900;
+  line-height: 0.85;
+}
+
+.font-roboto {
+  font-family: var(--roboto);
+  font-weight: 900 !important;
+}
+
+/* New Box Logo Utility */
+.c-logo-box {
+  display: inline-flex;
+  flex-direction: column;
+  font-family: var(--hipstelvetica);
+  font-weight: 900;
+  line-height: 0.8;
+  text-transform: uppercase;
+}
+.c-logo-box__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.c-logo-box__bos {
+  font-size: 1em;
+}
+
+.c-logo-box__year {
+  font-size: 1em;
+}
+
+.c-logo-box__feesten {
+  font-size: 1.15em; /* Scaled to match the full width of "BOS 2026" */
+  display: block;
+  text-align: left;
+  letter-spacing: -0.02em;
+}
+
+.text-neon-green {
+  color: var(--color-primary) !important;
+}
+.text-neon-pink {
+  color: var(--color-secondary) !important;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-black);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+}

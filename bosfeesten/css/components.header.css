@@ -1,0 +1,228 @@
+/* =============================================================================
+   COMPONENT: Hero Header
+   c-hero — Full-screen hero with slider, logo, info block and scroll indicator
+   ============================================================================= */
+
+.c-hero {
+  position: relative;
+  background-color: var(--color-black);
+  overflow: hidden;
+  padding-top: var(--header-height);
+}
+
+/* -------------------------------------------------------------------
+   Element: Slider wrapper
+   ------------------------------------------------------------------- */
+
+.c-hero__slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* -------------------------------------------------------------------
+   Element: Individual slide
+   ------------------------------------------------------------------- */
+
+.c-hero__slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 3s ease-in-out;
+}
+
+/* Modifier: Active slide */
+
+.c-hero__slide--active {
+  opacity: 0.6;
+}
+
+/* -------------------------------------------------------------------
+   Element: Titles container
+   ------------------------------------------------------------------- */
+
+.c-hero__titles {
+  position: relative;
+  z-index: 2;
+}
+
+/* -------------------------------------------------------------------
+   Element: Info block (subtitle + CTA button)
+   ------------------------------------------------------------------- */
+
+.c-hero__info {
+  margin-top: 3rem;
+  z-index: 2;
+}
+
+/* -------------------------------------------------------------------
+   Element: Scroll indicator anchor
+   ------------------------------------------------------------------- */
+
+.c-hero__scroll-indicator {
+  position: absolute;
+  bottom: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-top: 80px;
+  display: block;
+  cursor: pointer;
+}
+
+.c-hero__scroll-indicator span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: -0.75rem;
+  border-left: 0.125rem solid var(--color-secondary);
+  border-bottom: 0.125rem solid var(--color-secondary);
+  transform: rotate(-45deg);
+  animation: sdb07 3s infinite;
+  opacity: 0;
+  box-sizing: border-box;
+}
+
+.c-hero__scroll-indicator span:nth-of-type(1) {
+  animation-delay: 0s;
+}
+
+.c-hero__scroll-indicator span:nth-of-type(2) {
+  top: 1rem;
+  animation-delay: 0.15s;
+}
+
+.c-hero__scroll-indicator span:nth-of-type(3) {
+  top: 2rem;
+  animation-delay: 0.3s;
+}
+
+/* =============================================================================
+   OBJECT: Logo box
+   o-logo-box — Typographic logo block used inside the hero
+   ============================================================================= */
+
+.o-logo-box {
+  font-size: clamp(5rem, 20vw, 15rem);
+  font-family: var(--hipstelvetica);
+  font-weight: 900;
+}
+
+.o-logo-box__top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.o-logo-box__bos {
+  color: var(--color-white);
+}
+
+.o-logo-box__year {
+  color: var(--color-primary);
+}
+
+.o-logo-box__feesten {
+  color: var(--color-white);
+}
+
+/* =============================================================================
+   COMPONENT: Buttons
+   c-btn — Neon styled button variants
+   ============================================================================= */
+
+/* -------------------------------------------------------------------
+   Base: c-btn reset Bootstrap defaults
+   ------------------------------------------------------------------- */
+
+.c-btn {
+  border-radius: 0;
+  border: none;
+  font-family: var(--roboto);
+}
+
+/* -------------------------------------------------------------------
+   Modifier: Neon green
+   ------------------------------------------------------------------- */
+
+.c-btn--neon-green {
+  background-color: var(--color-primary);
+  color: var(--color-black);
+  box-shadow: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.c-btn--neon-green:hover {
+  background-color: var(--color-primary);
+  color: var(--color-black);
+  transform: translate(-0.25rem, -0.25rem);
+  box-shadow: 0.25rem 0.25rem 0 var(--color-secondary) !important;
+}
+
+/* -------------------------------------------------------------------
+   Modifier: Neon pink
+   ------------------------------------------------------------------- */
+
+.c-btn--neon-pink {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  font-weight: 900 !important;
+  font-family: var(--hipstelvetica);
+  transition: all 0.3s ease;
+}
+
+.c-btn--neon-pink:hover {
+  background-color: var(--color-white);
+  color: var(--color-secondary);
+  transform: translate(-0.25rem, -0.25rem);
+  box-shadow: 0.25rem 0.25rem 0 var(--color-secondary);
+}
+
+/* =============================================================================
+   ANIMATION: Scroll indicator bounce
+   ============================================================================= */
+
+@keyframes sdb07 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* =============================================================================
+   RESPONSIVE
+   ============================================================================= */
+
+@media (min-width: 769px) and (max-width: 1400px) {
+  .o-logo-box {
+    font-size: clamp(6rem, 12vw, 12rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .o-logo-box {
+    font-size: 5rem;
+  }
+
+  .c-hero__slide {
+    background-attachment: scroll;
+  }
+
+  .c-hero__info {
+    width: 90%;
+  }
+}

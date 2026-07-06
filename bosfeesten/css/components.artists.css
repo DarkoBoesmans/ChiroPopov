@@ -1,0 +1,167 @@
+.col-lg-custom-5 {
+  width: 20%;
+}
+
+@media (max-width: 992px) {
+  .col-lg-custom-5 {
+    width: 33.333%;
+  }
+}
+
+@media (max-width: 768px) {
+  .col-lg-custom-5 {
+    width: 50%;
+  }
+}
+
+.c-lineup__card {
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  background-color: var(--color-black);
+}
+
+.c-lineup__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(1) brightness(0.6);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.c-lineup__card:hover .c-lineup__img {
+  filter: grayscale(0) brightness(1);
+  transform: scale(1.1);
+}
+
+.c-lineup__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0) 50%
+  );
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+  padding: 2rem;
+}
+
+.c-lineup__text {
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  font-family: var(--poppins);
+
+  display: grid;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.c-lineup__text--badge {
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  font-weight: bold;
+  letter-spacing: 0.25rem;
+}
+
+/* Datum badge: cyan (accent) — onderscheiden van PLEIN badge */
+.c-lineup__text--date {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+}
+
+/* Stage badge: Meis = neon-pink, Plein = neon-green */
+.c-lineup__text--stage {
+  color: var(--color-black);
+}
+
+.c-lineup__text--stage--meis {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+}
+
+.c-lineup__text--stage--plein {
+  background-color: var(--color-primary);
+  color: var(--color-black);
+}
+
+.c-lineup__text--name {
+  font-family: var(--roboto);
+  letter-spacing: 0.5rem;
+  font-size: 1.5rem;
+  color: var(--color-white);
+}
+
+.c-lineup__countdown-cell {
+  aspect-ratio: 1/1;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-black);
+  color: var(--color-primary);
+}
+
+.c-lineup__countdown-cell small {
+  font-size: 0.6rem;
+  letter-spacing: 1px;
+}
+
+.c-lineup__countdown-cell .countdown-content {
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+  text-align: center;
+  color: var(--color-primary);
+}
+
+.c-lineup__countdown-cell .countdown-content__number {
+  font-family: var(--hipstelvetica);
+  font-size: 6rem;
+}
+
+.c-lineup__countdown-cell .countdown-content__unit {
+  font-family: var(--poppins);
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.c-lineup__countdown-cell .party-letter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+}
+
+.c-lineup__countdown-cell.is-party .countdown-content {
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.c-lineup__countdown-cell.is-party .party-letter {
+  display: flex !important;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  animation: partyPulse 2s ease-in-out infinite;
+}
+
+@keyframes partyPulse {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}
