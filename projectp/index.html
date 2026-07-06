@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project P - Chiro Popov Bouwt</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="icon" type="image/png" href="assets/img/logo/logo.png" />
+  </head>
+  <body>
+    <header class="header sticky-top bg-light shadow-sm">
+      <nav class="navbar navbar-expand-lg navbar-light container">
+        <a class="navbar-brand fw-bold text-primary" href="index.html">
+          <img
+            src="assets/img/logo/logo.png"
+            alt="Logo"
+            style="height: 3rem; margin-right: 0.5rem"
+            onerror="
+              this.onerror = null;
+              this.src =
+                'https://placehold.co/2560x1440@3x/E4D096/00124D?text=Chiro%5CnPopov&font=roboto.png';
+            "
+          />
+          Project P
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#doel">Ons Doel</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#shop">Steun Ons</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#blog">Updates</a>
+            </li>
+            <li class="nav-item">
+              <button
+                class="btn btn-outline-primary ms-2"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#cartOffcanvas"
+              >
+                <i class="bi bi-cart"></i> Winkelwagen
+              </button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Parallax Hero met Slideshow -->
+    <section class="c-hero text-center text-white d-flex align-items-center">
+      <div class="c-hero__slideshow" id="heroSlideshow">
+        <div
+          class="slide active"
+          style="
+            background-image: url(&quot;assets/img/header/header_1.jpg&quot;);
+          "
+        ></div>
+        <div
+          class="slide"
+          style="
+            background-image: url(&quot;assets/img/header/header_2.jpg&quot;);
+          "
+        ></div>
+        <div
+          class="slide"
+          style="
+            background-image: url(&quot;assets/img/header/header_3.jpg&quot;);
+          "
+        ></div>
+      </div>
+      <div class="container position-relative z-1">
+        <h1 class="display-3 fw-bold c-hero__title">
+          Project P: Een nieuw lokaal voor Chiro Popov
+        </h1>
+        <p class="lead mb-4 c-hero__subtitle">
+          Samen bouwen we aan de toekomst. Voor onze Chiro, en voor Gijzegem.
+        </p>
+        <a href="#shop" class="btn btn-primary btn-lg c-btn c-btn--large"
+          >Steun ons project</a
+        >
+      </div>
+    </section>
+
+    <section id="doel" class="py-5">
+      <div class="container">
+        <div class="row align-items-stretch g-5">
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <h2 class="fw-bold mb-4">Wat is Project P?</h2>
+            <p>
+              Om onze oude lokalen te vervangen door moderne lokalen die
+              aangepast zijn aan de huidige normen en tijdsgeest, is Chiro Popov
+              al enkele jaren bezig met het plannen van een nieuwbouwlokaal op
+              onze terreinen aan de Eerste Bochtweg in Gijzegem. Als alles
+              volgens planning loopt, start de bouw midden 2027.
+            </p>
+
+            <!-- Video Toegevoegd -->
+            <div class="my-4">
+              <video controls class="w-100 rounded shadow-sm border">
+                <source src="assets/video/news.mp4" type="video/mp4" />
+                Je browser ondersteunt deze video niet.
+              </video>
+              <p class="small text-muted mt-2 fst-italic">
+                De brand van 2024 bracht onze plannen in stroomversnelling.
+              </p>
+            </div>
+
+            <h4 class="mt-4">Hoe we dit financieren</h4>
+            <p>
+              De totale kost wordt geraamd op €500.000. De Stad Aalst
+              subsidieert ongeveer de helft. Onze doelstelling als Project P is
+              de overige €250.000 eigen inbreng te verzamelen via activiteiten
+              en steunacties.
+            </p>
+          </div>
+
+          <div class="col-lg-6">
+            <div
+              class="card h-100 shadow border-0 p-4 d-flex flex-column justify-content-center c-progress-card"
+            >
+              <h3 class="text-center mb-4 border-bottom border-primary pb-3">
+                Onze Voortgang
+              </h3>
+              <div class="progress mb-3 c-progress">
+                <div
+                  class="progress-bar bg-primary progress-bar-striped progress-bar-animated"
+                  role="progressbar"
+                  style="width: 36%"
+                  aria-valuenow="90000"
+                  aria-valuemin="0"
+                  aria-valuemax="250000"
+                >
+                  €90.000
+                </div>
+              </div>
+              <div class="d-flex justify-content-between fw-bold mb-4">
+                <span>Huidig: €90.000</span>
+                <span>Doel: €250.000</span>
+              </div>
+
+              <!-- Extra foto's om sectie te vullen -->
+              <div class="row g-2 mt-auto mb-3">
+                <div class="col-6">
+                  <img
+                    src="assets/img/blog/hulp1.jpg"
+                    class="img-fluid rounded shadow-sm"
+                    alt="Vrijwilligers"
+                    onerror="
+                      this.onerror = null;
+                      this.src =
+                        'https://placehold.co/2560x1440@3x/E4D096/00124D?text=Chiro%5CnPopov&font=roboto.png';
+                    "
+                  />
+                </div>
+                <div class="col-6">
+                  <img
+                    src="assets/img/blog/hulp2.jpg"
+                    class="img-fluid rounded shadow-sm"
+                    alt="Plannen"
+                    onerror="
+                      this.onerror = null;
+                      this.src =
+                        'https://placehold.co/2560x1440@3x/E4D096/00124D?text=Chiro%5CnPopov&font=roboto.png';
+                    "
+                  />
+                </div>
+              </div>
+
+              <p class="text-center small mb-0 fw-semibold mt-2">
+                Dankzij jullie steun brachten brunch, bosfeesten en wafels al
+                veel op. We hebben jouw hulp blijvend nodig!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="shop" class="py-5 bg-light">
+      <div class="container text-center">
+        <h2 class="fw-bold mb-3">Koop een deel van ons lokaal</h2>
+        <p class="mb-5 mx-auto c-shop__intro">
+          Hoe kan je Project P steunen? Kom naar onze activiteiten, sponsor
+          bouwmaterialen, of koop symbolisch een stukje van ons nieuwe lokaal!
+          Elke bijdrage brengt ons een steen dichter bij de start van de bouw.
+        </p>
+
+        <div class="row g-4 justify-content-center">
+          <!-- Mock Product 1 -->
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm border-0">
+              <div class="card-body py-5">
+                <i class="bi bi-bricks display-4 text-primary mb-3"></i>
+                <h4 class="card-title">Kleine Baksteen</h4>
+                <p class="card-text text-muted">
+                  Steun ons met een symbolische baksteen voor de nieuwe lokalen.
+                </p>
+                <h5 class="fw-bold mb-3">€ 10</h5>
+                <button
+                  class="btn btn-outline-primary w-100"
+                  type="button"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#cartOffcanvas"
+                >
+                  Toevoegen
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Mock Product 2 -->
+          <div class="col-md-4">
+            <div
+              class="card h-100 shadow-sm border-primary c-shop__card-active"
+            >
+              <div class="card-body py-5">
+                <i class="bi bi-house-door display-4 text-primary mb-3"></i>
+                <h4 class="card-title">Stevige Fundering</h4>
+                <p class="card-text text-muted">
+                  Sponsor een groter deel van de grond- en funderingswerken.
+                </p>
+                <h5 class="fw-bold mb-3">€ 50</h5>
+                <button
+                  class="btn btn-primary w-100"
+                  type="button"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#cartOffcanvas"
+                >
+                  Toevoegen
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Mock Product 3 -->
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm border-0">
+              <div class="card-body py-5">
+                <i class="bi bi-hammer display-4 text-primary mb-3"></i>
+                <h4 class="card-title">Gouden Dakpan</h4>
+                <p class="card-text text-muted">
+                  Help ons het dak erop te leggen met deze premium donatie.
+                </p>
+                <h5 class="fw-bold mb-3">€ 100</h5>
+                <button
+                  class="btn btn-outline-primary w-100"
+                  type="button"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#cartOffcanvas"
+                >
+                  Toevoegen
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="blog" class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-5 fw-bold">Nieuws & Updates</h2>
+        <!-- Dit id "blog-grid" wordt via main.js dynamisch ingevuld vanuit data.json -->
+        <div class="row g-4" id="blog-grid"></div>
+      </div>
+    </section>
+
+    <footer class="bg-dark text-white pt-5 pb-3">
+      <div class="container text-center text-md-start">
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <h5 class="fw-bold text-primary">
+              Project P - Chiro Popov Gijzegem
+            </h5>
+            <p class="mt-3">
+              Samen bouwen we aan de toekomst. Steun ons nieuw lokaal of kom
+              langs op onze evenementen zoals de brunch, bosfeesten of het
+              eetfestijn.
+            </p>
+          </div>
+          <div class="col-md-6 mb-4 text-md-end">
+            <h5 class="fw-bold">Contacteer Ons</h5>
+            <ul class="list-unstyled mt-3">
+              <li>
+                <i class="bi bi-envelope"></i>
+                <a
+                  href="mailto:project.p@chiropopov.be"
+                  class="text-white text-decoration-none"
+                  >project.p@chiropopov.be</a
+                >
+              </li>
+              <li class="mt-2">
+                <i class="bi bi-facebook"></i>
+                <a href="#" class="text-white text-decoration-none"
+                  >Volg ons op Facebook</a
+                >
+              </li>
+              <li class="mt-2">
+                <i class="bi bi-instagram"></i>
+                <a href="#" class="text-white text-decoration-none"
+                  >Volg ons op Instagram</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr />
+        <div class="text-center small">
+          <p class="mb-0">
+            &copy; 2023 Chiro Popov Gijzegem - Project P. Alle rechten
+            voorbehouden.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Offcanvas Winkelwagen -->
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="cartOffcanvas"
+      aria-labelledby="cartOffcanvasLabel"
+    >
+      <div class="offcanvas-header bg-light">
+        <h5 class="offcanvas-title fw-bold" id="cartOffcanvasLabel">
+          <i class="bi bi-cart3"></i> Jouw Kruiwagen
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body d-flex flex-column">
+        <p>Je hebt momenteel geen stenen in je kruiwagen liggen.</p>
+        <div class="mt-auto">
+          <button class="btn btn-primary w-100" disabled>Afrekenen</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="scripts/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+// css/_settings.scss
+
+$color-primary: #e1143c; // Chiro rood
+$color-black: #00124d; // Chiro blauw
+$color-white: #e4d096; // Chiro beige
+
+$font-family-base: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+:root {
+  --bs-primary: #{$color-primary};
+  --bs-primary-rgb:
+    225, 20, 60; /* RGB waarde van rood voor Bootstrap integratie */
+  --bs-dark: #{$color-black};
+  --bs-dark-rgb: 0, 18, 77; /* RGB waarde van blauw */
+  --c-beige: #{$color-white};
+}
+
+/* Geforceerde overrides omdat Bootstrap dit bij CDN gebruik nodig heeft */
+.text-primary,
+.nav-link:hover,
+.navbar-brand {
+  color: var(--bs-primary) !important;
+}
+
+.bg-primary {
+  background-color: var(--bs-primary) !important;
+}
+
+.btn-primary {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+
+  &:hover {
+    background-color: #c70e30;
+    border-color: #c70e30;
+  }
+}
+
+.btn-outline-primary {
+  color: var(--bs-primary);
+  border-color: var(--bs-primary);
+
+  &:hover {
+    background-color: var(--bs-primary);
+    color: white;
+  }
+}
+
+.bg-dark {
+  background-color: var(--bs-dark) !important;
+}

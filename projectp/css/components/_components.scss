@@ -1,0 +1,100 @@
+.c-hero {
+  position: relative;
+  border-bottom: 0.5rem solid var(--bs-primary);
+  height: 100vh; /* Veranderd van min-height naar force height */
+  overflow: hidden;
+
+  &__slideshow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    .slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed; /* Parallax effect */
+      opacity: 0;
+      transition: opacity 1.5s ease-in-out;
+
+      &.active {
+        opacity: 1;
+      }
+
+      /* Subtiele donkere overlay voor betere leesbaarheid tekst */
+      &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          rgba(0, 18, 77, 0.5),
+          rgba(0, 18, 77, 0.7)
+        ); // Gebruikt Chiro blauw tint
+      }
+    }
+  }
+
+  &__title {
+    text-shadow: 0.15rem 0.15rem 0.3rem rgba(0, 0, 0, 0.7);
+  }
+  &__subtitle {
+    text-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.6);
+  }
+}
+
+.c-card {
+  transition:
+    transform 0.2s ease-in-out,
+    box-shadow 0.2s;
+  background-color: #fff;
+
+  &:hover {
+    transform: translateY(-0.35rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  }
+
+  &__img {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Maakt de afbeelding perfect vierkant op elk scherm */
+    object-fit: cover;
+  }
+
+  &__title {
+    color: var(--bs-primary);
+  }
+}
+
+/* Verbeterde "Onze voortgang" module */
+.c-progress-card {
+  background-color: var(--c-beige) !important; /* Chiro beige achtergrond */
+  border: 0.2rem solid var(--bs-primary) !important;
+  border-radius: 1rem;
+  color: var(--bs-dark);
+
+  .c-progress {
+    height: 2.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+.c-shop {
+  &__intro {
+    max-width: 45rem;
+  }
+
+  &__card-active {
+    border-width: 0.2rem;
+    border-color: var(--bs-primary) !important;
+    background-color: rgba(225, 20, 60, 0.03); /* Lichte rode glow */
+  }
+}
