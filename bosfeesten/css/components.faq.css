@@ -1,0 +1,123 @@
+.c-faq {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+/* -------------------------------------------------------------------
+   Titel
+   ------------------------------------------------------------------- */
+
+.c-faq__title {
+  font-family: var(--hipstelvetica);
+  font-size: clamp(4rem, 12vw, 9rem);
+  text-transform: uppercase;
+  color: var(--color-white);
+  line-height: 0.85;
+  letter-spacing: -0.02em;
+}
+
+.c-faq__subtitle {
+  font-family: var(--poppins);
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+}
+
+/* -------------------------------------------------------------------
+   FAQ item
+   ------------------------------------------------------------------- */
+
+.c-faq__item {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.12);
+  transition: border-color 0.3s ease;
+}
+
+.c-faq__item:first-child {
+  border-top: 2px solid rgba(255, 255, 255, 0.12);
+}
+
+.c-faq__item:has(.c-faq__btn:not(.collapsed)) {
+  border-color: var(--color-primary);
+}
+
+/* -------------------------------------------------------------------
+   Knop
+   ------------------------------------------------------------------- */
+
+.c-faq__btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.75rem 0;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.c-faq__btn:hover .c-faq__btn-text {
+  color: var(--color-primary);
+}
+
+/* Volgnummer */
+.c-faq__btn-number {
+  font-family: var(--hipstelvetica);
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  min-width: 2.5rem;
+  flex-shrink: 0;
+  transition: color 0.3s ease;
+}
+
+/* Vraagtekst */
+.c-faq__btn-text {
+  font-family: var(--poppins);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-white);
+  flex-grow: 1;
+  transition: color 0.3s ease;
+}
+
+/* Plus/Min icoon */
+.c-faq__btn-icon {
+  font-size: 1.25rem;
+  color: var(--color-primary);
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.c-faq__icon--close {
+  display: none;
+}
+
+.c-faq__btn:not(.collapsed) .c-faq__icon--open {
+  display: none;
+}
+
+.c-faq__btn:not(.collapsed) .c-faq__icon--close {
+  display: inline;
+}
+
+.c-faq__btn:not(.collapsed) .c-faq__btn-text {
+  color: var(--color-primary);
+}
+
+.c-faq__btn:not(.collapsed) .c-faq__btn-number {
+  color: var(--color-secondary);
+}
+
+/* -------------------------------------------------------------------
+   Antwoord
+   ------------------------------------------------------------------- */
+
+.c-faq__answer {
+  padding: 0 0 1.75rem calc(2.5rem + 1.5rem);
+  font-family: var(--poppins);
+  font-size: 1rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.7);
+}

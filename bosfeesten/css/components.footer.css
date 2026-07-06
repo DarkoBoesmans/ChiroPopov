@@ -1,0 +1,36 @@
+.c-footer {
+    background-color: var(--color-black) !important;
+}
+
+.c-footer h3, .c-footer h4 {
+    font-family: var(--hipstelvetica);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.c-footer__socials a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background-color: rgba(255,255,255,0.05);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.c-footer__socials a:hover {
+    background-color: var(--color-primary);
+    transform: translateY(-3px);
+}
+
+.c-footer p {
+    font-family: var(--poppins);
+    opacity: 0.7;
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+.c-footer hr {
+    border-color: rgba(255,255,255,0.1);
+}

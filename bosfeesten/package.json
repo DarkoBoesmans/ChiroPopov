@@ -1,0 +1,20 @@
+{
+  "name": "bosfeesten-front-end",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "php": "php -S localhost:8080",
+    "bs": "browser-sync start --proxy 'localhost:8080' --files 'home.php,pages/*.php,css/*.css,js/*.js' --port 4000 --no-notify --no-open",
+    "dev": "concurrently \"npm run php\" \"npm run bs\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "browser-sync": "^2.29.3",
+    "concurrently": "^8.2.2"
+  }
+}

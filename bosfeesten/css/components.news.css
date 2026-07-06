@@ -1,0 +1,126 @@
+.c-news {
+  background-color: var(--color-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+/* -------------------------------------------------------------------
+   Parallax achtergrondpatroon (zoals locatie sectie)
+   ------------------------------------------------------------------- */
+
+.c-news__pattern {
+  position: absolute;
+  inset: 0;
+  background-image: url("../assets/pattern/backgroundPattern.svg");
+  background-repeat: repeat;
+  background-size: 150px;
+  opacity: 0.15;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* -------------------------------------------------------------------
+   Sectie titel
+   ------------------------------------------------------------------- */
+
+.c-news__title {
+  color: var(--color-black);
+  line-height: 0.85;
+  letter-spacing: -0.02em;
+  font-family: var(--hipstelvetica);
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+/* -------------------------------------------------------------------
+   Kaarten
+   ------------------------------------------------------------------- */
+
+.c-news__card {
+  transition: all 0.3s ease;
+  border-radius: 0;
+  overflow: hidden;
+  background: var(--color-black);
+  border: 2px solid var(--color-white);
+}
+
+.c-news__card:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 8px 8px 0 var(--color-secondary) !important;
+  border-color: var(--color-accent);
+}
+
+.c-news__img-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 2px solid var(--color-white);
+}
+
+.c-news__card:hover .c-news__img-wrapper {
+  border-color: var(--color-accent);
+}
+
+.c-news__badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 2;
+  padding: 8px 12px;
+  font-family: var(--hipstelvetica);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color: var(--color-secondary) !important;
+  color: var(--color-white);
+  border: 2px solid var(--color-white);
+  border-radius: 0;
+}
+
+.c-news__card img {
+  height: 20rem;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out;
+  display: block;
+  border-radius: 0 !important;
+}
+
+.c-news__fallback {
+  height: 20rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-black);
+  color: var(--color-primary);
+  font-family: var(--hipstelvetica);
+  font-size: 3rem;
+}
+
+.c-news__card:hover img {
+  transform: scale(1.15);
+}
+
+.c-news__card .card-title {
+  color: var(--color-secondary);
+  font-family: var(--roboto);
+  font-size: 1.5rem;
+  line-height: 1.1;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.c-news__date {
+  color: var(--color-accent);
+  font-family: var(--roboto);
+  font-weight: 900;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+.c-news__card .card-text {
+  color: var(--color-white);
+  font-family: var(--poppins);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}

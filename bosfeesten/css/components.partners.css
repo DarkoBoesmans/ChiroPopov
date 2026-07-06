@@ -1,0 +1,66 @@
+.c-partners {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+.c-partners__title {
+  font-family: var(--hipstelvetica);
+  font-size: 3rem;
+  margin-bottom: 4rem;
+  color: var(--color-primary);
+}
+
+/* Bootstrap ratio-1x1 zorgt voor perfecte vierkanten */
+.c-partners__card {
+  /* Witte achtergrond zodat mix-blend-mode: multiply werkt */
+  background-color: #ffffff;
+  border: 2px solid var(--color-white);
+  border-radius: 0;
+  transition: all 0.3s ease;
+}
+
+.c-partners__card:hover {
+  border-color: var(--color-secondary);
+  box-shadow: 6px 6px 0 var(--color-secondary);
+  transform: translate(-4px, -4px);
+}
+
+/* Inner div vult de ratio container volledig op */
+.c-partners__card-inner {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  /* Witte achtergrond op inner ook voor consistentie */
+  background-color: #ffffff;
+}
+
+.c-partners__card-inner img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: grayscale(100%);
+  mix-blend-mode: multiply;
+  transition: filter 0.3s ease;
+}
+
+.c-partners__card:hover .c-partners__card-inner img {
+  filter: grayscale(0%);
+  mix-blend-mode: multiply;
+}
+
+.c-partners__placeholder {
+  font-family: var(--hipstelvetica);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-black);
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+.c-partners__card:hover .c-partners__placeholder {
+  color: var(--color-secondary);
+}
